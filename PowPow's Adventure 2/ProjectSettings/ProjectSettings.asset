@@ -4,16 +4,16 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 15
-  productGUID: 35c1e1fdff679274eaa41b02bdd52f05
+  productGUID: d04bb985f7c1b2e4fa88e3bb1c934f5e
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
-  defaultScreenOrientation: 4
+  defaultScreenOrientation: 2
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: Futuristech Inc.
-  productName: pow_adv0.1
+  productName: PowPow's Adventure 2
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -60,13 +60,13 @@ PlayerSettings:
   allowedAutorotateToLandscapeRight: 1
   allowedAutorotateToLandscapeLeft: 1
   useOSAutorotation: 1
-  use32BitDisplayBuffer: 1
+  use32BitDisplayBuffer: 0
   preserveFramebufferAlpha: 0
   disableDepthAndStencilBuffers: 0
   androidBlitType: 0
   defaultIsNativeResolution: 1
   macRetinaSupport: 1
-  runInBackground: 0
+  runInBackground: 1
   captureSingleScreen: 0
   muteOtherAudioSources: 0
   Prepare IOS For Recording: 0
@@ -118,7 +118,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 1.0
+  bundleVersion: 0.1
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -151,7 +151,8 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.Futuristech.PowPow
+    Android: com.futuristech.powpowsadventure
+    Standalone: com.Company.ProductName
   buildNumber: {}
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 16
@@ -166,8 +167,8 @@ PlayerSettings:
   CreateWallpaper: 0
   APKExpansionFiles: 0
   keepLoadedShadersAlive: 0
-  StripUnusedMeshComponents: 0
-  VertexChannelCompressionMask: 214
+  StripUnusedMeshComponents: 1
+  VertexChannelCompressionMask: 4054
   iPhoneSdkVersion: 988
   iOSTargetOSVersionString: 8.0
   tvOSSdkVersion: 0
@@ -236,9 +237,9 @@ PlayerSettings:
   iOSRequireARKit: 0
   appleEnableProMotion: 0
   vulkanEditorSupport: 0
-  clonedFromGUID: 00000000000000000000000000000000
-  templatePackageId: 
-  templateDefaultScene: 
+  clonedFromGUID: 5f34be1353de5cf4398729fda238591b
+  templatePackageId: com.unity.template.2d@1.0.1
+  templateDefaultScene: Assets/Scenes/SampleScene.unity
   AndroidTargetArchitectures: 5
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
@@ -361,13 +362,7 @@ PlayerSettings:
     Android: 1
     iPhone: 1
     tvOS: 1
-  m_BuildTargetGroupLightmapEncodingQuality:
-  - m_BuildTarget: Standalone
-    m_EncodingQuality: 1
-  - m_BuildTarget: XboxOne
-    m_EncodingQuality: 1
-  - m_BuildTarget: PS4
-    m_EncodingQuality: 1
+  m_BuildTargetGroupLightmapEncodingQuality: []
   m_BuildTargetGroupLightmapSettings: []
   playModeTestRunnerEnabled: 0
   runPlayModeTestAsEditModeTest: 0
@@ -626,7 +621,7 @@ PlayerSettings:
   webGLMemorySize: 256
   webGLExceptionSupport: 1
   webGLNameFilesAsHashes: 0
-  webGLDataCaching: 0
+  webGLDataCaching: 1
   webGLDebugSymbols: 0
   webGLEmscriptenArgs: 
   webGLModulesDirectory: 
@@ -646,14 +641,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: pow_adv0.1
+  metroPackageName: Template_2D
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: pow_adv0.1
+  metroApplicationDescription: Template_2D
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -711,12 +706,13 @@ PlayerSettings:
     daydream:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 6a159c0c-453b-4858-9eb2-faa153faa503
-  projectName: pow_adv0.1
-  organizationId: kyriin
+  cloudProjectId: abf6c531-d513-40e6-b4f3-7f45f4ac650b
+  projectName: PowPow's Adventure 2
+  organizationId: greggisgood
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
