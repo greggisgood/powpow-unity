@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     Animator animator;
     int jumps = 0;
     private bool isGrounded;
+
     // Use this for initialization
     void Start()
     {
@@ -22,36 +23,30 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         animator.SetBool("right", false);
         animator.SetBool("left", false);
 
-        /*if (Input.GetKeyDown (KeyCode.Space)) {
-			if (jumps < 1) {
-				r.AddForce(Vector2.up * 500);
-                jumps++;
-			}
-			else {
-				jumps = 0;
-			}
-		} */
-
-        foreach (Touch touch in Input.touches)
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            if (touch.phase == TouchPhase.Began)
-            {
-                if(jumps < 1)
-                {
-                    r.AddForce(Vector2.up * 500);
-                    jumps++;
-                }
-                else
-                {
-                    jumps = 0;
-                }
-            }
-            
+            r.AddForce(Vector2.up * 300);
         }
+
+        //foreach (Touch touch in Input.touches)
+        //{
+        //    if (touch.phase == TouchPhase.Began)
+        //    {
+        //        if(jumps < 1)
+        //        {
+        //            r.AddForce(Vector2.up * 100);
+        //            jumps++;
+        //        }
+        //        else
+        //        {
+        //            jumps = 0;
+        //        }
+        //    }
+
+        //}
 
         if (Input.GetKey(KeyCode.RightArrow))
         {
@@ -63,6 +58,21 @@ public class Player : MonoBehaviour
             player.transform.position -= (new Vector3(1, 0, 0) * speed * Time.deltaTime);
             animator.SetBool("left", true);
         }
+    }
 
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "ground")
+        {
+            isGrounded = true;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "ground")
+        {
+            isGrounded = false;
+        }
     }
 }
