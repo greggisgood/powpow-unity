@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-
     public float speed;
     GameObject player;
     Rigidbody2D r;
@@ -28,7 +27,7 @@ public class Player : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            r.AddForce(Vector2.up * 300);
+            r.AddForce(Vector2.up * 400);
         }
 
         //foreach (Touch touch in Input.touches)
